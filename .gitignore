@@ -1,0 +1,5 @@
+node_modules
+yarn.lock
+ios/Pods
+.DS_store
+android/app/build/*
