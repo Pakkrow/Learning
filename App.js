@@ -8,9 +8,9 @@ const App = () => {
   // const isLogin = useSelector((state) => state.user?.token);
   const isLogin = false;
   return (
-    <NavigationContainer theme={customTheme}>
-      <Main />
-    </NavigationContainer>
+    //<NavigationContainer theme={customTheme}>
+    <Main />
+    //</NavigationContainer>
   );
 };
 

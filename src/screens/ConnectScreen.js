@@ -1,13 +1,65 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { useTheme, useNavigation } from '@react-navigation/native';
 import { Text, View, Pressable } from 'react-native';
 import { TextInput } from 'react-native-paper';
 import CustomButton from '../components/Button';
+import AuthContext from '../context/context';
 
 const LandingScreen = () => {
   const { colors } = useTheme();
   const navigation = useNavigation();
+  const context = useContext(AuthContext);
+  const [data, setData] = useState({
+    email: '',
+    password: '',
+  });
 
+  const [errors, setErrors] = useState({
+    email: '',
+    password: '',
+  });
+
+  const handleEmailChange = (value) => {
+    setData({
+      ...data,
+      email: value,
+    });
+  };
+
+  const handlePasswordChange = (value) => {
+    setData({
+      ...data,
+      password: value,
+    });
+  };
+
+  /* const paramsIsValid = () => {
+    let bool = true
+
+    if (!EmailValidator.validate(data.email)) {
+        bool = false
+        setErrors({
+            email: 'Email Invalide'
+        })
+    } else if (data.password.trim().length < 8) {
+        bool = false
+        setErrors({
+            email: 'Le mot de passe doit contenir au moins 8 caractères.'
+        })
+    }
+    return bool;
+}*/
+
+  const handleSubmit = () => {
+    // setErrors({ email: '', password: '' });
+
+    if (true) {
+      //paramsIsValid()) {
+      context.changeIsAuth();
+    } else {
+      console.log('errors');
+    }
+  };
   return (
     <View
       style={{

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTheme, useNavigation } from '@react-navigation/native';
 import { Text, View, Image } from 'react-native';
 import CustomButton from '../components/Button';
@@ -6,7 +6,6 @@ import CustomButton from '../components/Button';
 const LandingScreen = () => {
   const { colors } = useTheme();
   const navigation = useNavigation();
-
   return (
     <View
       style={{
